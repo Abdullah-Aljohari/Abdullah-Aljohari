@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SignInPage </title>
+</head>
+
+<body>
+<fieldset>
+<legend>Signup Form</legend>
+<form name="frmContact" method="post" action="contact.php">
+<p>
+<label for="Name">UserName </label>
+<input type="text" name="txtName" id="txtName">
+</p>
+<p>
+<label for="email">Email</label>
+<input type="text" name="txtEmail" id="txtEmail">
+</p>
+<p>
+<label for="password">password</label>
+<input type="password" name="txtPass" id="txtpass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+</p>
+<p>
+<label for="message">Renter The password</label>
+<input type="password" name="txtpass1" id="txtpass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+</p>
+<p>&nbsp;</p>
+<p>
+<input type="submit" name="Submit" id="Submit" value="Submit">
+</p>
+<p>Already have an account? <a href="signin.html">Sign in</a>.</p>
+</form>
+</fieldset>
+<div id="message">
+    <h3>Password must contain the following:</h3>
+    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+    <p id="number" class="invalid">A <b>number</b></p>
+    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  </div>
+</body>
+</html>
